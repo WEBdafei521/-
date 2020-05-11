@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view>
+  <view class="l-index-title">
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588850668169&di=d254e14adf0f1c4103f575f268e601c7&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D3639586362%2C1106029531%26fm%3D214%26gp%3D0.jpg"></image>
+  </view>
+  <!-- main -->
+  <view class="l-main">
+    <view class="l-main-circle-one">
+      <view class="l-main-circle-two my_display my_display_mid">
+        <view class="l-main-circle-three">
+          <view class="l-main-circle-four" bindtap="user">
+            <view style="font-size:72rpx">
+              <text class="cuIcon-people"></text> 
+            </view>
+            <view>我的</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 整个模块 -->
+    <view class="">
+      <!-- 上两个 -->
+      <view class="l-main-top my_display my_display_spa">
+        <view bindtap="sale_trend">
+          <view class="l-main-top-nei">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-rank"></text> 
+            </view>
+            <view>销势</view>
+          </view>
+        </view>
+
+        <view>
+          <view class="l-main-top-nei" bindtap="tradeList">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-attention"></text> 
+            </view>
+            <view>交易列表</view>
+          </view>
+        </view>
+      </view>
+      <!-- 下两个 -->
+      <view class="l-main-bottom my_display my_display_spa">
+        <view>
+          <view class="l-main-top-nei">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-recharge"></text> 
+            </view>
+            <view>暂无</view>
+          </view>
+        </view>
+        <view>
+          <view class="l-main-top-nei" bindtap="daily_report">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-edit"></text>
+            </view>
+            <view>日报表</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

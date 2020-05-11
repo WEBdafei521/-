@@ -1,0 +1,159 @@
+<!--pages/daily_report/index.wxml-->
+<view class="container1">
+  <view class="l-title flex solid-bottom padding-sm justify-between">
+    <view bindtap="aaa"> <text class="cuIcon-radioboxfill text-cyan padding-sm"></text>各油品总收益</view>
+    <view></view>
+  </view>
+  <view style="background:#fff;">
+      <!-- 直观图 -->
+      <view class="swiper-item">
+        <!-- 收益所占比重 -->
+        <view class="canvas_report">
+          <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie " ec="{{ ec }}"></ec-canvas>
+        </view>
+        <!-- 数据 -->
+        <view class="l-body-model">
+          <view wx:for="{{tableDate}}" wx:key="index">
+            <view>{{item.abbreviate}}收益：</view>
+            <view class="l-value">{{item.tradeMoney}}元</view>
+          </view>
+          <!-- <view>
+            <view>95#收益：</view>
+            <view class="l-value">10元</view>
+          </view>
+          <view>
+            <view>98#收益：</view>
+            <view class="l-value">6.5元</view>
+          </view>
+          <view>
+            <view>100#收益：</view>
+            <view class="l-value">99元</view>
+          </view>
+          <view>
+            <view>0#收益：</view>
+            <view class="l-value">99元</view>
+          </view> -->
+        </view>
+      </view>   
+  </view>
+
+  <view class="l-title flex solid-bottom padding-sm justify-between">
+    <view> <text class="cuIcon-radioboxfill text-cyan padding-sm"></text>各油品销售油量占比</view>
+    <view></view>
+  </view>
+
+  <view class="page-body">
+    <!-- 油品列表 -->
+    <!-- 92# -->
+    <view wx:for="{{tableDate}}" wx:key="index">
+      <!-- 直观图 -->
+      <view class="swiper-item">
+        <!-- 油品型号 -->
+        <view class="padding-sm flex solid-bottom padding-sm justify-between"> 
+          <view>
+            <text class="cuIcon-radiobox text-cyan padding-sm"></text>{{item.abbreviate}}
+          </view>
+          <view class="l-trande-info">查看详情</view>
+        </view>
+      </view>   
+      <!-- 数据 -->
+      <view class="l-body-model">
+        <view>
+          <view>加油车次：</view>
+          <view class="l-value">{{item.total}}</view>
+        </view>
+        <view>
+          <view>加油总量：</view>
+          <view class="l-value">{{item.qty}}L</view>
+        </view>
+        <view>
+          <view>油品价格：</view>
+          <view class="l-value">6.5元</view>
+        </view>
+        <view>
+          <view>收益金额：</view>
+          <view class="l-value">{{item.tradeMoney}}元</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 油品列表 -->
+    <!-- 95# -->
+    <view>
+      <!-- 直观图 -->
+      <view class="swiper-item">
+        <!-- 油品型号 -->
+        <view class="padding-sm flex solid-bottom padding-sm justify-between"> 
+          <view>
+            <text class="cuIcon-radiobox text-cyan padding-sm"></text>95#
+          </view>
+          <view class="l-trande-info">查看详情</view>
+        </view>
+        <!-- 油品所占比重 -->
+        <!-- <view class="canvas_report">
+          <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie " ec="{{ ec1 }}"></ec-canvas>
+        </view> -->
+      </view>   
+      <!-- 数据 -->
+      <view class="l-body-model">
+        <view>
+          <view>加油车次：</view>
+          <view class="l-value">10</view>
+        </view>
+        <view>
+          <view>加油总量：</view>
+          <view class="l-value">10L</view>
+        </view>
+        <view>
+          <view>油品价格：</view>
+          <view class="l-value">6.5元</view>
+        </view>
+        <view>
+          <view>收益金额：</view>
+          <view class="l-value">99元</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 油品列表 -->
+    <!-- 98# -->
+    <view>
+      <!-- 直观图 -->
+      <view class="swiper-item">
+        <!-- 油品型号 -->
+        <view class="padding-sm flex solid-bottom padding-sm justify-between"> 
+          <view>
+            <text class="cuIcon-radiobox text-cyan padding-sm"></text>98#
+          </view>
+          <view class="l-trande-info">查看详情</view>
+        </view>
+        <!-- 油品所占比重 -->
+        <!-- <view class="canvas_report">
+          <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie " ec="{{ ec3 }}"></ec-canvas>
+        </view> -->
+      </view>   
+      <!-- 数据 -->
+      <view class="l-body-model">
+        <view>
+          <view>加油车次：</view>
+          <view class="l-value">10</view>
+        </view>
+        <view>
+          <view>加油总量：</view>
+          <view class="l-value">10L</view>
+        </view>
+        <view>
+          <view>油品价格：</view>
+          <view class="l-value">6.5元</view>
+        </view>
+        <view>
+          <view>收益金额：</view>
+          <view class="l-value">99元</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  
+</view>
